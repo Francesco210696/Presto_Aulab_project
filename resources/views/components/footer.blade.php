@@ -1,5 +1,5 @@
  <!-- FOOTER START -->
-  <div class="footer">
+  <div class="footer mt-5">
     <div class="contain">
     <div class="col">
       <h1>Company</h1>
