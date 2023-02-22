@@ -31,15 +31,19 @@
                     <a class="nav-link disabled">Disabled</a>
                 </li>
             </ul>
-            <ul class="navbar-nav d-flex me-5">
-                @guest
+            @guest
+                <ul class="navbar-nav d-flex me-5">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/login">Login</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="/register">Register</a>
                     </li>
-                @else
+                </ul>
+            @else
+
+                <ul class="navbar-nav d-flex me-5">
+                    <li class="nav-item me-3"> <a href="{{route('announcements.create')}}"><button class="btn btn-info">+ AGGIUNGI ANNUNCIO</button></a></li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                             aria-expanded="false">
@@ -54,8 +58,8 @@
                             <li><a class="dropdown-item" href="/logout">Logout</a></li>
                         </ul>
                     </li>
-
-                @endguest
+                </ul>
+            @endguest
         </div>
     </div>
 </nav>
