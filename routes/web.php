@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AnnouncementController;
+use App\Http\Controllers\FrontController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,11 +14,15 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-//PAGECONTROLLER
-Route::get('/', function () {
-    return view('welcome');
-});
+//FRONTCONTROLLER
+Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
+Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.show');
 
+
+
+//ANNOUNCEMENTCONTROLLER
+Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
+Route::get('/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
 
 //LIVEWIRE
 Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
