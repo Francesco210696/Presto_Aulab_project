@@ -1,2 +1,13 @@
 @import 'bootstrap';
 @import './styleFooter.css';
+
+.personalCategory a{
+all: unset;
+}
+.personalCategory:hover{
+  cursor: pointer;
+  transform:scale(1.2);
+  transition: 1s;
+  border-bottom: 1px solid red !important;
+}
+
