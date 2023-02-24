@@ -26,3 +26,6 @@ Route::get('/annunci', [AnnouncementController::class, 'indexAnnouncement'])->na
 
 //LIVEWIRE
 Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
+
+Route::get('/contattaci', [FrontController::class, 'contactUs'])->name('contactUs');
+Route::post('/salva/contatto', [FrontController::class, 'saveContact'])->name('saveContact');

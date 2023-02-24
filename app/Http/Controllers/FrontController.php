@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\ContactReceivedMail;
 use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class FrontController extends Controller
 {
@@ -17,5 +19,13 @@ class FrontController extends Controller
     public function categoryShow(Category $category)
     {
         return view('announcements.categoryShow', compact('category'));
+    }
+    public function contactUs(){
+        return view('contact');
+    }
+    public function saveContact(Request $request){
+       $contact = $request->all();
+       Mail::to('proprietario@gmail.com')->send(new ContactReceivedMail($contact));
+       return redirect()->back()->with('message', 'complimenti hai inviato una mail con successo');
     }
 }
