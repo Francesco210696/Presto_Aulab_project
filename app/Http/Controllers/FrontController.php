@@ -20,12 +20,14 @@ class FrontController extends Controller
     {
         return view('announcements.categoryShow', compact('category'));
     }
-    public function contactUs(){
+    public function contactUs()
+    {
         return view('contact');
     }
-    public function saveContact(Request $request){
-       $contact = $request->all();
-       Mail::to('proprietario@gmail.com')->send(new ContactReceivedMail($contact));
-       return redirect()->back()->with('message', 'complimenti hai inviato una mail con successo');
+    public function saveContact(Request $request)
+    {
+        $contact = $request->all();
+        Mail::to('proprietario@gmail.com')->send(new ContactReceivedMail($contact));
+        return redirect()->back()->with('success', 'complimenti hai inviato una mail con successo');
     }
 }

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\FrontController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +15,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
 //FRONTCONTROLLER
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.show');
+
+
 
 
 

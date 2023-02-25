@@ -1,6 +1,23 @@
 @import 'bootstrap';
 @import './styleFooter.css';
 
+
+/* root */
+:root{
+  --blue:#89D5E0;
+  --verde:#C1DDCC;
+  --panna:#E9E6BD;
+  --melone:#F78E22;
+  --arancia:#FC7000;
+}
+/* end root */
+body{
+ 
+   background-color: var(--panna);
+}
+nav{
+  background-color: var(--verde);
+}
 .personalCategory a{
 all: unset;
 }
@@ -9,5 +26,18 @@ all: unset;
   transform:scale(1.2);
   transition: 1s;
   border-bottom: 1px solid red !important;
+}
+
+/* test */
+.primary-logo {
+  box-shadow: 4px 4px 13px 0 rgba(0, 0, 0, 0.11);
+width: 115px;
+}
+
+.primary-logo a img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  width: 100%;
 }
 

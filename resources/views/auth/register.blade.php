@@ -1,5 +1,5 @@
 <x-main>
-<div class="container mt-5">
+    <div class="container mt-5">
         <div class="row">
             <div class="col-6 mx-auto">
                 <h1>Registrati</h1>
@@ -43,6 +43,16 @@
                         </div>
                     </div>
                 </form>
+                @if (session('status') == 'verification-link-sent')
+                    <div class="mb-4 font-medium text-sm text-green-600">
+                        A new email verification link has been emailed to you!
+                    </div>
+                    <form action="/verify-email">
+                        @csrf
+                        <p>non hai ricevuto l'email? clicca qui per riprovare</p>
+                        <button type="submit"class="btn btn-primary">Reinvia email</button>
+                    </form>
+                @endif
             </div>
         </div>
     </div>
