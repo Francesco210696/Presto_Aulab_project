@@ -7,7 +7,7 @@
         </div>
         @error('name')
         <div class="alert alert-danger shadow my-4 py-2">
-            <p>{{message}}</p>
+            <p>{{$message}}</p>
         </div>
         @enderror
 
@@ -18,7 +18,7 @@
         </div>
         @error('email')
         <div class="alert alert-danger shadow my-4 py-2">
-            <p>{{message}}</p>
+            <p>{{$message}}</p>
         </div>
         @enderror
         <div class="mb-3">
