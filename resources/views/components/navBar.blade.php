@@ -61,7 +61,12 @@
                         </ul>
                     </li>
                 </ul>
+
             @endguest
+            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+                <input type="search" name="searched" class="form-control me-2" placeholder="Cerca" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Cerca</button>
+            </form>
         </div>
     </div>
 </nav>

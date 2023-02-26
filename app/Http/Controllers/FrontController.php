@@ -30,4 +30,8 @@ class FrontController extends Controller
         Mail::to('proprietario@gmail.com')->send(new ContactReceivedMail($contact));
         return redirect()->back()->with('success', 'complimenti hai inviato una mail con successo');
     }
+    public function searchAnnouncements(Request $request){
+        $announcements = Announcement::search($request->searched)->paginate(10);
+        return view('announcements.index',compact('announcements'));
+    }
 }

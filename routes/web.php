@@ -36,3 +36,6 @@ Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncemen
 //MAIL
 Route::get('/contattaci', [FrontController::class, 'contactUs'])->name('contactUs');
 Route::post('/salva/contatto', [FrontController::class, 'saveContact'])->name('saveContact');
+
+//SEARCHBAR
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
