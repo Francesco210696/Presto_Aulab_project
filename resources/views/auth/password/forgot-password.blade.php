@@ -1,14 +1,15 @@
 <x-main>
+    <x-slot name='title'>Recupero password</x-slot>
     <div class="container mt-5">
         <div class="row">
             <div class="col-6 mx-auto">
-                <h1>Accedi </h1>
+                <h1>Recupewra password </h1>
                 @if (session('status'))
                     <div class="mt-3 alert alert-success font-medium text-sm">
                         {{ session('status') }}
                     </div>
                 @endif
-                <form action="/login" method="POST">
+                <form action="/forgot-password" method="POST">
                     @csrf
                     <div class="row g-3">
                         <div class="col-12">
@@ -19,21 +20,11 @@
                             @enderror
                         </div>
                         <div class="col-12">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" class="form-control">
-                            @error('password')
-                                <span class="small text-danger">{{ $message }}</span>
-                            @enderror
-                        </div>
-                        <div class="col-12">
-                            <button type="submit" class="btn btn-primary">Accedi</button>
-                        </div>
-
-                        <div class="check-box">
-                            <a href="/forgot-password" class="form-check">Non ricordi la tua password?</a>
+                            <button type="submit" class="btn btn-primary">Recupera password</button>
                         </div>
                     </div>
                 </form>
+                
             </div>
         </div>
     </div>

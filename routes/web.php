@@ -2,7 +2,11 @@
 
 use App\Http\Controllers\AnnouncementController;
 use App\Http\Controllers\FrontController;
+<<<<<<< HEAD
 use App\Http\Controllers\RevisorController;
+=======
+use App\Http\Controllers\UserController;
+>>>>>>> a9f7ca10a4a01fc6d521ede9f6f87e64d50332a0
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,9 +19,13 @@ use Illuminate\Support\Facades\Route;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
 //FRONTCONTROLLER
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.show');
+
+
 
 
 
@@ -28,9 +36,12 @@ Route::get('/annunci', [AnnouncementController::class, 'indexAnnouncement'])->na
 //LIVEWIRE
 Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
 
+
+//MAIL
 Route::get('/contattaci', [FrontController::class, 'contactUs'])->name('contactUs');
 Route::post('/salva/contatto', [FrontController::class, 'saveContact'])->name('saveContact');
 
+<<<<<<< HEAD
 //Home Revisore
 Route::get('/revisor/home',[RevisorController::class,'index'])->middleware('isRevisor')->name('revisor.index');
 
@@ -49,3 +60,7 @@ Route::get('/richiesta/revisore', [RevisorController::class,'becomeRevisor'])->m
 //Rendi utente revisore
 
 Route::get('/rendi/revisore/{user}',  [RevisorController::class,'makeRevisor'])->name('make.revisor');
+=======
+//SEARCHBAR
+Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
+>>>>>>> a9f7ca10a4a01fc6d521ede9f6f87e64d50332a0
