@@ -21,7 +21,7 @@ class Announcement extends Model
         return $this->belongsTo(User::class);
     }
 
-<<<<<<< HEAD
+
     public function setAccepted($value)
 
     {
@@ -34,7 +34,8 @@ class Announcement extends Model
     public static function  toBeRevisionedCount()
     {
         return Announcement::where ('is_accepted', null)->count();
-=======
+    }
+
     public function toSearchableArray(){
         $category = $this->category;
         $array = [
@@ -44,6 +45,6 @@ class Announcement extends Model
             'category' => $category,
         ];
         return $array;
->>>>>>> a9f7ca10a4a01fc6d521ede9f6f87e64d50332a0
+
     }
 }
