@@ -1,4 +1,12 @@
 /* FOOTER  */
+.footer-a{
+  all: unset;
+  
+}
+.footer-a:hover{
+  all: unset;
+
+}
   .footer {
     width: 100%;
     position: relative;
@@ -31,7 +39,7 @@
     margin: 0;
     padding: 0;
   }
-  .footer .col ul li {
+  .footer .col  ul li  {
     color: #999999;
     font-size: 14px;
     font-family: inherit;
@@ -52,6 +60,7 @@
     transition: .1s;
     -webkit-transition: .1s;
     -moz-transition: .1s;
+
   }
   .clearfix {
     clear: both;

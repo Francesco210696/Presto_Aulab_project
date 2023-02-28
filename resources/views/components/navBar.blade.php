@@ -49,6 +49,20 @@
                         </a>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Profilo</a></li>
+                            @if (Auth::user()->is_revisor)
+                                <li><a class="dropdown-item" aria-current="page" href="{{ route('revisor.index') }}">
+                                        Revisione
+                                        <span
+                                            class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger">
+                                            {{ App\Models\Announcement::toBeRevisionedCount() }}
+                                            <span class="visually-hidden">
+                                                unread messages
+                                            </span>
+                                        </span>
+                                    </a>
+                                </li>
+                            @endif
+
                             <li><a class="dropdown-item" href="#">impostazioni</a></li>
                             <li>
                                 <hr class="dropdown-divider">
@@ -63,7 +77,7 @@
                 </ul>
 
             @endguest
-            <form action="{{route('announcements.search')}}" method="GET" class="d-flex">
+            <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
                 <input type="search" name="searched" class="form-control me-2" placeholder="Cerca" aria-label="Search">
                 <button class="btn btn-outline-success" type="submit">Cerca</button>
             </form>

@@ -2,16 +2,21 @@
     <x-slot name="title">Presto|HomePage</x-slot>
 
     <div class="container mt-5 ">
+        @if (session('access.denied'))
+            <div class="alert alert-danger text-center">{{ session('access.denied') }}</div>
+        @endif
         <div class="text-center">
             <img src="\img\Soon_solo_logo.png" class="img-fluid w-25" alt="">
         </div>
         <div class="row g-3">
+
             <div class="col-12">
                 <div class="row g-3">
                     @foreach ($categories as $category)
                         <div class="col-md-4 col-lg-2 me-3 text-center personalCategory mt-5">
-                            <a href="{{ route('category.show', $category) }}"><img src="https://picsum.photos/200?random"
-                                    class="img-fluid rounded-circle " alt="">
+                            <a href="{{ route('category.show', $category) }}"><img
+                                    src="https://picsum.photos/200?random" class="img-fluid rounded-circle "
+                                    alt="">
                                 <h5 class="h5-category-custom">{{ $category->name }}</h5>
                             </a>
                         </div>
