@@ -1,6 +1,7 @@
 <x-main>
     <div class="container mt-5">
-        @forelse ($category->announcements as $announcement)
+
+        @forelse ($category->announcements->where('is_accepted', true) as $announcement)
             <div>
                 <h5>{{ $announcement->title }}</h5>
                 <p>{{ $announcement->description }}</p>

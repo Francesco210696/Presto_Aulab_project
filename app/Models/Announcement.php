@@ -25,10 +25,9 @@ class Announcement extends Model
     public function setAccepted($value)
 
     {
-        $this->is_accepted=$value;
-        $this->save;
+        $this->is_accepted = $value;
+        $this->save();
         return true;
-
     }
 
     public static function  toBeRevisionedCount()
@@ -36,7 +35,8 @@ class Announcement extends Model
         return Announcement::where('is_accepted', null)->count();
     }
 
-    public function toSearchableArray(){
+    public function toSearchableArray()
+    {
         $category = $this->category;
         $array = [
             'id' => $this->id,
@@ -45,6 +45,5 @@ class Announcement extends Model
             'category' => $category,
         ];
         return $array;
-
     }
 }

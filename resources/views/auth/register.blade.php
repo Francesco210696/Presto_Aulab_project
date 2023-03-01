@@ -1,5 +1,66 @@
 <x-main>
-    <div class="container mt-5">
+    <x-loginRegisterStructure>
+        <x-slot name="login_register">
+            <div class="card-front">
+                <div class="center-wrap">
+                    <div class="section text-center">
+
+                        <!-- register -->
+                        <h4 class="mb-4 pb-3">Register</h4>
+                        <form action="/register" method="POST">
+                            @csrf
+                            <div class="form-group">
+                                <!-- name -->
+                                <input type="text" name="name" class="form-style @error('name') is-invalid @enderror"
+                                    placeholder="Your Full Name" id="name" autocomplete="off">
+                                <i class="input-icon uil uil-user"></i>
+                                @error('name')
+                                    <span class="small text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group mt-2">
+                                <!-- email -->
+                                <input type="email" name="email"
+                                    class="form-style @error('email') is-invalid @enderror" placeholder="Your Email"
+                                    id="email" autocomplete="off">
+                                <i class="input-icon uil uil-at"></i>
+                                @error('email')
+                                    <span class="small text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group mt-2">
+                                <!-- password -->
+                                <input type="password" name="password"
+                                    class="form-style @error('password') is-invalid @enderror"
+                                    placeholder="Your Password" id="password" autocomplete="off">
+                                <i class="input-icon uil uil-lock-alt"></i>
+                                @error('password')
+                                    <span class="small text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <div class="form-group mt-2">
+                                <!-- password_confirmation-->
+                                <input type="password"
+                                    name="password_confirmation @error('password_confirmation') is-invalid @enderror"
+                                    class="form-style" placeholder="Confirm Your Password" id="password_confirmation"
+                                    autocomplete="off">
+                                <i class="input-icon uil uil-lock-alt"></i>
+                                @error('password_confirmation')
+                                    <span class="small text-danger">{{ $message }}</span>
+                                @enderror
+                            </div>
+                            <button type="submit" class="btn mt-4">Registrati</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </x-slot>
+    </x-loginRegisterStructure>
+
+
+
+
+    {{-- <div class="container mt-5">
         <div class="row">
             <div class="col-6 mx-auto">
                 <h1>Registrati</h1>
@@ -55,5 +116,5 @@
                 @endif
             </div>
         </div>
-    </div>
+    </div> --}}
 </x-main>
