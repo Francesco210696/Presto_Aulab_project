@@ -13,15 +13,12 @@
                 @error('name') is-invalid @enderror id="name" aria-describedby="emailHelp">
         </div>
         @error('name')
-<<<<<<< HEAD
         <div class="alert alert-danger shadow my-4 py-2">
             <p>{{$message}}</p>
         </div>
-=======
             <div class="alert alert-danger shadow my-4 py-2">
                 <p>{{ $message }}</p>
             </div>
->>>>>>> a9f7ca10a4a01fc6d521ede9f6f87e64d50332a0
         @enderror
 
         <div class="mb-3">
@@ -31,15 +28,12 @@
             <div class="form-text" id="emailHelp">Non mostreremo la tua email a nessuno. </div>
         </div>
         @error('email')
-<<<<<<< HEAD
         <div class="alert alert-danger shadow my-4 py-2">
             <p>{{$message}}</p>
         </div>
-=======
             <div class="alert alert-danger shadow my-4 py-2">
                 <p>{{ $message }}</p>
             </div>
->>>>>>> a9f7ca10a4a01fc6d521ede9f6f87e64d50332a0
         @enderror
         <div class="mb-3">
             <textarea name="message"  cols="30" rows="10" class="form-control"
