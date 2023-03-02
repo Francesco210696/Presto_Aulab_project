@@ -1,17 +1,20 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 @import 'bootstrap';
 @import './loginRegister.css';
-/* @import 'unicons'; */
+
+
 
 /* root */
 :root{
-  --dark-blue:#1f2029;
+  --dark-blue:#16171d;
   --panna: #c4c3ca;
-  --blue:#102770;
+  --blue:#000000;
   --gold:#ffeba7;
 }
 /* end root */
 
+
+/* general */
 body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
@@ -21,25 +24,34 @@ body{
 	background-color: var(--dark-blue);
 	overflow-x: hidden;
 }
+
 a{
   cursor: pointer!important;
 }
+/* navbar */
+
+
+
 nav{
   background-color: var(--blue);
 }
 .nav-search{
   width: 800px;
 }
+.hamburger{
+background-color: var(--gold);
+}
+
 a.nav-elements{
   all: unset;
   color: var(--gold);
+  font-weight: bold;
+  font-size: 20px;
 }
 .nav-elements{
   color: var(--gold);
 }
-.drop-category{
-  background-color: var(--blue);
-}
+
 .primary-logo {
   box-shadow: 4px 4px 13px 0 rgba(0, 0, 0, 0.11);
 width: 115px;
@@ -51,6 +63,25 @@ width: 115px;
   height: auto;
   width: 100%;
 }
+
+/* cards */
+
+.card-width{
+  width: 500px;
+}
+
+
+/* category */
+.drop-category{
+  background-color: var(--blue);
+}
+
+/* homepage */
+.card-theme{
+  background-color: rgba(128, 128, 128, 0.443);
+  box-shadow: 6px 7px 10px 2px var(--gold)!important;
+}
+
 
 /* FOOTER  */
 .footer-a{
