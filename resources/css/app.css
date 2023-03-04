@@ -16,6 +16,7 @@
 
 /* general */
 body{
+  overflow: initial !important;
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	font-size: 15px;
@@ -31,9 +32,9 @@ a{
 /* navbar */
 
 
-
 nav{
   background-color: var(--blue);
+
 }
 .nav-search{
   width: 800px;
@@ -79,7 +80,11 @@ width: 115px;
 /* homepage */
 .card-theme{
   background-color: rgba(128, 128, 128, 0.443);
-  box-shadow: 6px 7px 10px 2px var(--gold)!important;
+  box-shadow: 6px 5px 3px 2px #45464a !important;
+}
+.card-theme:hover{
+  transform: scale(1.1);
+  transition: 0.7s;
 }
 
 
@@ -94,7 +99,7 @@ width: 115px;
 }
   .footer {
     width: 100%;
-    position: relative;
+    position: fixed-bottom;
     height: auto;
     background-color:var(--blue);
   }
