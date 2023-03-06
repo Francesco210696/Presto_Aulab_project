@@ -35,4 +35,10 @@ class FrontController extends Controller
         $announcements = Announcement::search($request->searched)->paginate(10);
         return view('announcements.index',compact('announcements'));
     }
+
+    public function setLenguage($lang)
+    {
+        session()->put('locale',$lang);
+        return redirect()->back();
+    }
 }

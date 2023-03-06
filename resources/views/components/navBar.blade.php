@@ -25,7 +25,7 @@
             </ul>
             <ul class="navbar-nav d-flex me-5">
                 <li class="nav-item me-3">
-                    <a class=" nav-elements" href="{{ route('announcements.index') }}">Annunci</a>
+                    <a class=" nav-elements" href="{{ route('announcements.index') }}">{{__('ui.allAnnouncements')}}</a>
                 </li>
                 {{-- categorie --}}
                 <li class="nav-item dropdown me-3">
@@ -40,6 +40,7 @@
                         @endforeach
                     </ul>
                 </li>
+               
                 @guest
                     <li class="nav-item">
                         <a class="active me-3 nav-elements" aria-current="page" href="/login">

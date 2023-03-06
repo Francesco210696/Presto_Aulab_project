@@ -60,3 +60,7 @@ Route::get('/rendi/revisore/{user}',  [RevisorController::class,'makeRevisor'])-
 //SEARCHBAR
 Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])->name('announcements.search');
 
+//CAMBIO LINGUA
+
+Route::post('/lingua/{lang}', [FrontController::class.'setLenguage'])->name('set_lenguage_locale');
+
