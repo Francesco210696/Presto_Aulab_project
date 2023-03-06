@@ -40,6 +40,9 @@
                         @endforeach
                     </ul>
                 </li>
+                <li class="nav-elements bg-light">
+                    <x-lingua lang="en" nation="en"/>
+                </li>
                
                 @guest
                     <li class="nav-item">

@@ -62,5 +62,5 @@ Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])
 
 //CAMBIO LINGUA
 
-Route::post('/lingua/{lang}', [FrontController::class.'setLenguage'])->name('set_lenguage_locale');
+Route::post('/lingua/{lang}', [FrontController::class,'setLenguage'])->name('set_lenguage_locale');
 
