@@ -1,4 +1,6 @@
 <?php
-return ['allAnnouncements'=>'Here\'s all announcements!'
+return [
+    'allAnnouncements' => 'Announcements',
+    'search'=>'search'
 
 ];

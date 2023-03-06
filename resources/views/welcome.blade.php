@@ -5,8 +5,10 @@
         @if (session('access.denied'))
             <div class="alert alert-danger text-center">{{ session('access.denied') }}</div>
         @endif
-        <div class="text-center">
-            <img src="\img\Soon_solo_logo.png" class="img-fluid w-25" alt="">
+        <div class="bg-dark w-100 text-light text-center p-5">
+            <h1>Benvenuto su Soon</h1>
+            <h5>fai affari dovunque tu sia...! </h5>
+
         </div>
         <div class="row justify-content-start ms-5">
             @foreach ($announcements as $announcement)

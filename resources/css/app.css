@@ -8,7 +8,7 @@
 /* root */
 :root{
   --dark-blue:#16171d;
-  --panna: #c4c3ca;
+  --grey: #c4c3ca;
   --blue:#000000;
   --gold:#ffeba7;
 }
@@ -22,8 +22,8 @@ body{
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
-	color:var(--panna);
-	background-color: var(--dark-blue);
+	color:var(--dark-blue);
+	background-color: var(--grey);
 	overflow-x: hidden;
 }
 

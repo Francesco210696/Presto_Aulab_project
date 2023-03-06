@@ -1,4 +1,5 @@
 <?php
-return ['allAnnouncements'=>'Eccos los nostros annuncios!'
+return ['allAnnouncements'=>'Annuncios',
+'search'=>'busque',
 
 ];

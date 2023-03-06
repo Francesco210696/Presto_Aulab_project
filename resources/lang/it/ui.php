@@ -1,5 +1,7 @@
 <?php
-return ['allAnnouncements'=>'Ecco i nostri annunci!',
-
+return [
+    'allAnnouncements' => 'Annunci',
+    'search'=>'cerca'
+    
 
 ];

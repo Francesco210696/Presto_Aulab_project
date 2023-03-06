@@ -9,9 +9,9 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
              <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
-                    <input type="search" name="searched" class="form-control nav-search me-2" placeholder="Cerca"
+                    <input type="search" name="searched" class="form-control nav-search me-2" placeholder="{{__('ui.search')}}"
                         aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">Cerca</button>
+                    <button class="btn btn-outline-success" type="submit">{{__('ui.search')}}</button>
                 </form>
             </li>
         </ul>
@@ -40,10 +40,7 @@
                         @endforeach
                     </ul>
                 </li>
-                <li class="nav-elements bg-light">
-                    <x-lingua lang="en" nation="en"/>
-                </li>
-               
+
                 @guest
                     <li class="nav-item">
                         <a class="active me-3 nav-elements" aria-current="page" href="/login">
@@ -65,7 +62,9 @@
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu drop-category text-center ">
-                            <li><a class="dropdown-item nav-elements" href="#">Profilo</a></li>
+                            <li>
+                                <a class="dropdown-item nav-elements" href="#">Profilo</a>
+                            </li>
                             @if (Auth::user()->is_revisor)
                                 <li>
                                     <a class="dropdown-item nav-elements" aria-current="page"
@@ -99,6 +98,17 @@
                 </ul>
 
             @endguest
+            <li class="nav-item dropdown ">
+                <a class="nav-elements dropdown-toggle  me-5" href="#" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Lingua
+                    </a>
+                <ul class="dropdown-menu drop-category text-center ">
+                  <li><x-lingua lang="en" nation="gb"/></li>
+                  <li> <x-lingua lang="it" nation="it"/></li>
+                  <li><x-lingua lang="es" nation="es"/></li>                      
+                </ul>
+            </li>
         </div>
     </div>
 </nav>
