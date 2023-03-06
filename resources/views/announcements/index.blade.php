@@ -8,22 +8,23 @@
         <div class="row flex-column ms-5 mt-5">
 
             @forelse ($announcements as $announcement)
-           
-                <div class="col-10 mt-1  border border-dark drop-category rounded" >
+                <div class="col-10 mt-1  border border-dark drop-category rounded">
                     <div class="card-shadow d-flex mt-1 overflow-auto ">
-                        <img src="https://picsum.photos/200" class="rounded me-5">
+                        <img src="{{ $announcement->images()->get()->isEmpty()? Storage::url($announcement->images()->first()->path): 'https://picsum.photos/200' }}"
+                            class="rounded me-5">
                         <div>
                             <h5 class="card-title  ">{{ $announcement->title }}</h5>
 
                             <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
-                            <a href="{{route('announcements.show', $announcement)}}" class="btn  mb-5">{{ $announcement->price }}€</a>
+                            <a href="{{ route('announcements.show', $announcement) }}"
+                                class="btn  mb-5">{{ $announcement->price }}€</a>
                             <a href="{{ route('category.show', ['category' => $announcement->category]) }}"
                                 class="ms-3 mb-5 btn">{{ $announcement->category->name }}</a>
                             <p>{{ $announcement->description }}</p>
                         </div>
                     </div>
                 </div>
-            
+
             @empty
                 <div class="col-12">
                     <div class="alert alert-warning py-3 shadow">
