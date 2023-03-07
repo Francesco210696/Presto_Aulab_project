@@ -22,7 +22,7 @@ body{
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
-	color:var(--dark-blue);
+	color:var(--grey);
 	background-color: var(--grey);
 	overflow-x: hidden;
 }

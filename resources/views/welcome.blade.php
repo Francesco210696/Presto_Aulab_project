@@ -6,7 +6,7 @@
             <div class="alert alert-danger text-center">{{ session('access.denied') }}</div>
         @endif
         <div class="bg-dark w-100 text-light text-center p-5">
-            <h1>Benvenuto su Soon</h1>
+            <h1>{{__('ui.welcome')}}</h1>
             <h5>fai affari dovunque tu sia...! </h5>
 
         </div>
@@ -14,7 +14,8 @@
             @foreach ($announcements as $announcement)
                 <div class="col-12 col-lg-4 my-4 mx-4 card-width">
                     <div class="card card-theme">
-                        <img src="https://picsum.photos/200/" alt="" class="card-img-top img-fluid p-3 rounded">
+                        <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' : Storage::url($announcement->images()->first()->path) }}"
+                            class="rounded me-5 w-100 img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">{{ $announcement->title }}</h5>
                             <p class="card-text">{{ $announcement->description }}</p>

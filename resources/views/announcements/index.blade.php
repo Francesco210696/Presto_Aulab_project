@@ -10,9 +10,12 @@
             @forelse ($announcements as $announcement)
                 <div class="col-10 mt-1  border border-dark drop-category rounded">
                     <div class="card-shadow d-flex mt-1 overflow-auto ">
-                        <img src="{{ $announcement->images()->get()->isEmpty()? Storage::url($announcement->images()->first()->path): 'https://picsum.photos/200' }}"
-                            class="rounded me-5">
+                        <img
+                            src="{{ $announcement->images()->get()->isEmpty()? '\img\Soon_solo_logo.png': Storage::url($announcement->images()->first()->path) }}"class="rounded me-5 img-fluid">
                         <div>
+
+
+
                             <h5 class="card-title  ">{{ $announcement->title }}</h5>
 
                             <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
