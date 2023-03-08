@@ -5,8 +5,8 @@
             <div class="card-shadow d-flex mt-1 overflow-auto ">
 
                 @foreach ($announcement->images->all() as $image)
-                    <img
-                        src="{{ $announcement->images()->get()->isEmpty()? '\img\Soon_solo_logo.png':$announcement->images()->first()->getUrl(1000,1000) }}">
+                    <img class="rounded"
+                        src="{{ $image->get()->isEmpty()? '\img\Soon_solo_logo.png':$image->getUrl(1000,1000) }}">
                 @endforeach
                 <div>
                     <h5 class="card-title  ">{{ $announcement->title }}</h5>

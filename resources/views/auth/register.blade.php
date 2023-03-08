@@ -12,7 +12,7 @@
                             <div class="form-group">
                                 <!-- name -->
                                 <input type="text" name="name" class="form-style @error('name') is-invalid @enderror"
-                                    placeholder="Your Full Name" id="name" autocomplete="off">
+                                    placeholder="Your Full Name" id="name">
                                 <i class="input-icon uil uil-user"></i>
                                 @error('name')
                                     <span class="small text-danger">{{ $message }}</span>
@@ -22,7 +22,7 @@
                                 <!-- email -->
                                 <input type="email" name="email"
                                     class="form-style @error('email') is-invalid @enderror" placeholder="Your Email"
-                                    id="email" autocomplete="off">
+                                    id="email">
                                 <i class="input-icon uil uil-at"></i>
                                 @error('email')
                                     <span class="small text-danger">{{ $message }}</span>
@@ -32,7 +32,7 @@
                                 <!-- password -->
                                 <input type="password" name="password"
                                     class="form-style @error('password') is-invalid @enderror"
-                                    placeholder="Your Password" id="password" autocomplete="off">
+                                    placeholder="Your Password" id="password">
                                 <i class="input-icon uil uil-lock-alt"></i>
                                 @error('password')
                                     <span class="small text-danger">{{ $message }}</span>
@@ -40,10 +40,9 @@
                             </div>
                             <div class="form-group mt-2">
                                 <!-- password_confirmation-->
-                                <input type="password"
-                                    name="password_confirmation @error('password_confirmation') is-invalid @enderror"
-                                    class="form-style" placeholder="Confirm Your Password" id="password_confirmation"
-                                    autocomplete="off">
+                                <input type="password" name="password_confirmation"
+                                    class="form-style @error('password_confirmation') is-invalid @enderror"
+                                    placeholder="Confirm Your Password" id="password_confirmation">
                                 <i class="input-icon uil uil-lock-alt"></i>
                                 @error('password_confirmation')
                                     <span class="small text-danger">{{ $message }}</span>

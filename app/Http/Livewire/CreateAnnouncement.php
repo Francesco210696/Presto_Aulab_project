@@ -67,6 +67,7 @@ class CreateAnnouncement extends Component
 
 
                 dispatch(new ResizeImage($newImage->path , 300, 300));
+                dispatch(new ResizeImage($newImage->path , 1000, 1000));
             }
 
 
