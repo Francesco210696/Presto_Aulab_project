@@ -14,7 +14,7 @@
             @foreach ($announcements as $announcement)
                 <div class="col-12 col-lg-4 my-4 mx-4 card-width">
                     <div class="card card-theme">
-                        <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' : Storage::url($announcement->images()->first()->path) }}"
+                        <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' :$announcement->images()->first()->getUrl(300,300) }}"
                             class="rounded me-5 w-100 img-fluid">
                         <div class="card-body">
                             <h5 class="card-title">{{ $announcement->title }}</h5>

@@ -5,7 +5,7 @@
             @forelse ($category->announcements->where('is_accepted', true) as $announcement)
                 <div class="col-10 mt-1  border border-dark drop-category rounded">
                     <div class="card-shadow d-flex mt-1 overflow-auto ">
-                        <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' : Storage::url($announcement->images()->first()->path) }}">
+                        <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' : $announcement->images()->first()->getUrl(300,300) }}">
                         <div>
                             <h5 class="card-title  ">{{ $announcement->title }}</h5>
 

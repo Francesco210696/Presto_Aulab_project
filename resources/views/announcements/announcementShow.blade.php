@@ -6,7 +6,7 @@
 
                 @foreach ($announcement->images->all() as $image)
                     <img
-                        src="{{ $announcement->images()->get()->isEmpty()? '\img\Soon_solo_logo.png': Storage::url($image->path) }}">
+                        src="{{ $announcement->images()->get()->isEmpty()? '\img\Soon_solo_logo.png':$announcement->images()->first()->getUrl(1000,1000) }}">
                 @endforeach
                 <div>
                     <h5 class="card-title  ">{{ $announcement->title }}</h5>

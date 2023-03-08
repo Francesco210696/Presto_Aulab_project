@@ -11,7 +11,7 @@
                 @if ($announcement_to_check->images)
                     @foreach ($announcement_to_check->images as $image)
                         <div class="d-block">
-                            <img src="{{ Storage::url($image->path) }}" class="rounded me-5">
+                            <img src="{{ $image->getUrl(300,300) }}" class="rounded me-5">
                         </div>
                     @endforeach
                 @endif

@@ -6,6 +6,7 @@ use App\Jobs\ResizeImage;
 use App\Models\Announcement;
 use App\Models\Category;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\File;
 use Livewire\Component;
 use Livewire\WithFileUploads;
 
