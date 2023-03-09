@@ -8,10 +8,10 @@
         </div>
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li>
-             <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
-                    <input type="search" name="searched" class="form-control nav-search me-2" placeholder="{{__('ui.search')}}"
-                        aria-label="Search">
-                    <button class="btn btn-outline-success" type="submit">{{__('ui.search')}}</button>
+                <form action="{{ route('announcements.search') }}" method="GET" class="d-flex">
+                    <input type="search" name="searched" class="form-control nav-search me-2"
+                        placeholder="{{ __('ui.search') }}" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">{{ __('ui.search') }}</button>
                 </form>
             </li>
         </ul>
@@ -25,8 +25,12 @@
             </ul>
             <ul class="navbar-nav d-flex me-5">
                 <li class="nav-item me-3">
-                    <a class=" nav-elements" href="{{ route('announcements.index') }}">{{__('ui.allAnnouncements')}}</a>
+                    <a class=" nav-elements"
+                        href="{{ route('announcements.index') }}">{{ __('ui.allAnnouncements') }}</a>
                 </li>
+
+
+
                 {{-- categorie --}}
                 <li class="nav-item dropdown me-3">
                     <a class="dropdown-toggle nav-elements " href="#" role="button" data-bs-toggle="dropdown"
@@ -98,15 +102,24 @@
                 </ul>
 
             @endguest
-            <li class="nav-item dropdown ">
-                <a class="nav-elements dropdown-toggle  me-5" href="#" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Lingua
-                    </a>
+            <li style="list-style:none" class="nav-item dropdown ">
+                <a class="nav-elements dropdown-toggle  me-5" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    Lingua
+                </a>
                 <ul class="dropdown-menu drop-category text-center ">
-                  <li><x-lingua lang="en" nation="gb"/></li>
-                  <li> <x-lingua lang="it" nation="it"/></li>
-                  <li><x-lingua lang="es" nation="es"/></li>                      
+                    <li>
+                        <span>English</span>
+                        <x-lingua lang="en" nation="gb" />
+                    </li>
+                    <li>
+                        <span>Italiano</span>
+                        <x-lingua lang="it" nation="it" />
+                    </li>
+                    <li>
+                        <span>Espaniol</span>
+                        <x-lingua lang="es" nation="es" />
+                    </li>
                 </ul>
             </li>
         </div>

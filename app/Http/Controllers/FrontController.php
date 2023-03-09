@@ -13,7 +13,7 @@ class FrontController extends Controller
     public function welcome()
     {
         $announcements = Announcement::where('is_accepted', true)->take(6)->get()->sortByDesc('created_at');
-        
+
         return view('welcome', compact('announcements'));
     }
 
@@ -21,6 +21,7 @@ class FrontController extends Controller
     {
         return view('announcements.categoryShow', compact('category'));
     }
+    
     public function contactUs()
     {
         return view('contact');
@@ -31,14 +32,15 @@ class FrontController extends Controller
         Mail::to('proprietario@gmail.com')->send(new ContactReceivedMail($contact));
         return redirect()->back()->with('success', 'complimenti hai inviato una mail con successo');
     }
-    public function searchAnnouncements(Request $request){
+    public function searchAnnouncements(Request $request)
+    {
         $announcements = Announcement::search($request->searched)->paginate(10);
-        return view('announcements.index',compact('announcements'));
+        return view('announcements.index', compact('announcements'));
     }
 
     public function setLenguage($lang)
     {
-        session()->put('locale',$lang);
+        session()->put('locale', $lang);
         return redirect()->back();
     }
 }

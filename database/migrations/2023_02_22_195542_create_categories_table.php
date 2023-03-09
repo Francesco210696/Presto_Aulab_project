@@ -18,10 +18,12 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = ['Motori', 'Informatica', 'Elettrodomestici', 'Libri', 'Giochi', 'Sport', 'Immobili', 'Telefoni', 'Arredamento', 'Giardino'];
-
+        
+        
         foreach ($categories as $category) {
             Category::create(['name' => $category]);
         }
+        
     }
 
     /**

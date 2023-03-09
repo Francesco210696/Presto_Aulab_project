@@ -27,6 +27,7 @@ Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->n
 
 
 
+
 //ANNOUNCEMENTCONTROLLER
 Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class, 'showAnnouncement'])->name('announcements.show');
 Route::get('/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
