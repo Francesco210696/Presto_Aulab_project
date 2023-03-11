@@ -14,7 +14,7 @@
                             <a class=" nav-elements " href="{{ route('category.show', $category) }}">
                                 <div class="row justify-content-between m-2 text-center category-home-buttons ">
                                     <div class="col-12">
-                                        <i class="fa fa-home" aria-hidden="true"></i>
+                                        <i class="fa {{$category->icon}}" aria-hidden="true"></i>
                                     </div>
                                     <div class="col-12">
                                         {{ $category->name }}
@@ -26,7 +26,7 @@
                     @endforeach
                 </div>
             </div>
-            {{-- @foreach ($announcements as $announcement)
+            @foreach ($announcements as $announcement)
                 <div class="col-12 col-lg-4 my-4 mx-4 card-width">
                     <div class="card card-theme">
                         <img src="{{ $announcement->images()->get()->isEmpty() ? '\img\Soon_solo_logo.png' :$announcement->images()->first()->getUrl(300,300) }}"
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                 </div>
-            @endforeach --}}
+            @endforeach
         </div>
         <div class="w-100 text-light text-center p-5 mt-5">
             <h1>{{ __('ui.welcome') }}</h1>

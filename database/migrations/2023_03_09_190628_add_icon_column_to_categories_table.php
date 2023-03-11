@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::table('categories', function (Blueprint $table) {
             $table->string('icon')->after('id');
         });
-        $icons = ['directions_car', ' devices', 'kitchen', 'menu_book', 'sports_esports', 'fitness_center', 'cottage', 'smartphone', 'chair', 'local_florist'];
+        $icons = ['fa-car', ' fa-laptop', 'fa-microchip', 'fa-book', 'fa-gamepad', 'fa-futbol-o', 'fa-home', 'fa-mobile', 'fa-bath', 'fa-leaf'];
         $categorie = Category::all();
         $i = 0;
         foreach ($categorie as $categoria) {

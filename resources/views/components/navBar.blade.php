@@ -102,22 +102,22 @@
                 </ul>
 
             @endguest
-            <li style="list-style:none" class="nav-item dropdown ">
+            <li style="list-style:none" class="nav-item dropdown me-3">
                 <a class="nav-elements dropdown-toggle  me-5" href="#" role="button" data-bs-toggle="dropdown"
                     aria-expanded="false">
                     Lingua
                 </a>
                 <ul class="dropdown-menu drop-category text-center ">
                     <li>
-                        <span>English</span>
+                        <span class="nav-elements">English</span>
                         <x-lingua lang="en" nation="gb" />
                     </li>
                     <li>
-                        <span>Italiano</span>
+                        <span class="nav-elements">Italiano</span>
                         <x-lingua lang="it" nation="it" />
                     </li>
                     <li>
-                        <span>Espaniol</span>
+                        <span class="nav-elements">Espaniol</span>
                         <x-lingua lang="es" nation="es" />
                     </li>
                 </ul>
