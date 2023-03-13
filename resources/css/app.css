@@ -23,8 +23,8 @@ body{
 	font-weight: 300;
 	font-size: 15px;
 	line-height: 1.7;
-	color:var(--grey);
-	background-color: var(--grey);
+	color:var(--dark-blue);
+	background-color: white;
 	overflow-x: hidden;
 }
 
@@ -110,13 +110,13 @@ width: 115px;
 /* cards */
 
 .card-width{
-  width: 500px;
+  width: 200px;
 }
 
 
 /* category */
 .drop-category{
-  background-color: var(--blue);
+  background-color: var(--grey);
 }
 
 .category-home-buttons{
