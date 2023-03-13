@@ -67,8 +67,8 @@
                         </a>
                         <ul class="dropdown-menu drop-category text-center ">
                             <li class=" dropdown-item me-3"> <a class="btn me-2" href="{{ route('announcements.create') }}">
-                                AGGIUNGI ANNUNCIO</a>
-                        </li>
+                                    AGGIUNGI ANNUNCIO</a>
+                            </li>
                             <li>
                                 <a class="dropdown-item nav-elements" href="#">Profilo</a>
                             </li>
@@ -87,7 +87,7 @@
                                     </a>
                                 </li>
                             @endif
-                            
+
 
                             <li><a class="dropdown-item nav-elements" href="#">impostazioni</a></li>
                             <li>
@@ -100,7 +100,7 @@
                                 </form>
                         </ul>
                     </li>
-                    
+
                 </ul>
 
             @endguest

@@ -21,12 +21,13 @@ return new class extends Migration
             'motori',
             'Informatica',
             'Elettrodomestici',
-            'Giardino',
-            'Arredamento',
-            'Telefoni',
-            'Immobili',
-            'Sport',
+            'Libri',
             'Giochi',
+            'Sport',
+            'Immobili',
+            'Telefoni',
+            'Arredamento',
+            'Giardino',
 
         ];
 

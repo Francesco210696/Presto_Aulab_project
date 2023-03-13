@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900');
 @import 'bootstrap';
+@import 'bootstrap-icons';
 @import './loginRegister.css';
 @import 'flag-icon-css/css/flag-icons';
 @import 'font-awesome/css/font-awesome';
@@ -164,7 +165,10 @@ box-shadow: 6px 3px 10px 3px #45464a !important;
 }
   .footer {
     width: 100%;
-    position: fixed-bottom;
+    position: fixed bottom;
+    
+   
+    
     height: auto;
     background-color:var(--blue);
   }
