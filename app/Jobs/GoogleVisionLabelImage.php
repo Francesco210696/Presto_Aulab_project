@@ -39,7 +39,7 @@ class GoogleVisionLabelImage implements ShouldQueue
 
         //IMposta la variabile d'ambiente al google application credentials
         //al patch del credentials file
-        putenv('GOOGLE_APPLICCATION_CREDENTIALS=' . base_path('google_credential.json'));
+        putenv('GOOGLE_APPLICATION_CREDENTIALS=' . base_path('google_credential.json'));
 
         $imageAnnotator = new ImageAnnotatorClient();
         $response = $imageAnnotator->labelDetection($image);

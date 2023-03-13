@@ -17,7 +17,7 @@
                                         <i class="fa {{ $category->icon }}" aria-hidden="true"></i>
                                     </div>
                                     <div class="col-12">
-                                        {{ $category->name }}
+                                        {{ __('ui.'. $category->name) }}
                                     </div>
                                 </div>
 

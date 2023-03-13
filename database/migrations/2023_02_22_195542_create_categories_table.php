@@ -18,16 +18,16 @@ return new class extends Migration
             $table->timestamps();
         });
         $categories = [
-            __('ui.motori'),
-            __('ui.Informatica'),
-            __('ui.Elettrodomestici'),
-            __('ui.Giardino'),
-            __('ui.Arredamento'),
-            __('ui.Telefoni'),
-            __('ui.Immobili'),
-            __('ui.Sport'),
-            __('ui.Giochi'),
-            __('ui.motori'),
+            'motori',
+            'Informatica',
+            'Elettrodomestici',
+            'Giardino',
+            'Arredamento',
+            'Telefoni',
+            'Immobili',
+            'Sport',
+            'Giochi',
+
         ];
 
 
