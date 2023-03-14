@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    @vite(['resources\css\app.css', 'resources\js\app.js']) 
+    @vite(['resources\css\app.css', 'resources\js\app.js'])
     <title>{{ $title ?? 'Soon.it' }}</title>
 
 </head>
@@ -17,12 +17,20 @@
 <body>
     <header>
         <x-navBar />
-
     </header>
-    {{ $slot }}
-    <x-footer />
+    <div id="page-container">
+        <div id="content-wrap">
+            {{ $slot }}
+        </div>
+        <x-footer />
+    </div>
 
     @livewireScripts
 </body>
 
 </html>
+
+
+
+
+<!-- tutto il resto della pagina -->

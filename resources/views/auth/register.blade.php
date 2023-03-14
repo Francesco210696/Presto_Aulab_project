@@ -12,7 +12,7 @@
                             <div class="form-group">
                                 <!-- name -->
                                 <input type="text" name="name" class="form-style @error('name') is-invalid @enderror"
-                                    placeholder="Your Full Name" id="name">
+                                    placeholder="Your Full Name" id="name" value="{{old('name')}}">
                                 <i class="input-icon uil uil-user"></i>
                                 @error('name')
                                     <span class="small text-danger">{{ $message }}</span>
@@ -22,7 +22,7 @@
                                 <!-- email -->
                                 <input type="email" name="email"
                                     class="form-style @error('email') is-invalid @enderror" placeholder="Your Email"
-                                    id="email">
+                                    id="email" value="{{old('email')}}">
                                 <i class="input-icon uil uil-at"></i>
                                 @error('email')
                                     <span class="small text-danger">{{ $message }}</span>

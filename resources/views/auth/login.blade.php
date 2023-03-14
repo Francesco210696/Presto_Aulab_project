@@ -11,7 +11,7 @@
                             <div class="form-group">
                                 <!-- email -->
                                 <input type="email" name="email" class="form-style" placeholder="Your Email"
-                                    id="email">
+                                    id="email" value="{{old('email')}}">
                                 <i class="input-icon uil uil-at"></i>
                                 @error('email')
                                     <span class="small text-danger">{{ $message }}</span>

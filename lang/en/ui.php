@@ -21,4 +21,6 @@ return [
     'welcome' => 'Welcome on Soon',
     'affair' => 'make business wherever you want',
     'publicated' => 'publicated at',
+    'about'=>'Work with Us',
+    'company'=>'Our Company',
 ];

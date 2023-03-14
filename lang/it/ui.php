@@ -14,10 +14,12 @@ return [
 
 
 
-
+    //rest
+    'about' => 'Lavora con noi',
     'allAnnouncements' => 'Annunci',
     'search' => 'cerca',
     'welcome' => 'Benvenuto su Soon',
     'affair' => 'fai affari dovunque tu sia',
     'publicated' => 'Pubblicato il',
+    'company' => 'Chi Siamo',
 ];

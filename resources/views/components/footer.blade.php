@@ -1,73 +1,34 @@
  <!-- FOOTER START -->
- <div class="footer mt-5 ">
-     <div class="row  pt-2">
+ <div class="footer ">
+     <div class="row  p-5">
          <div class="col-12 text-center">
              @if (session()->has('message'))
                  <p class="text-success fw-bold">{{ session('message') }}</p>
              @endif
          </div>
+         {{-- about Us --}}
+         <div class="col-4">
+           
+             <ul>
+                 <li class=""><a class="footer-a nav-elements btn" href="{{ route('became.revisor') }}">{{ __('ui.about')}}</a></li>
+             </ul>
+         </div>
+
+        {{-- Where Find --}}
+         <div class="col-4">
+            <h3 class="f-title">{{ __('ui.company') }}</h3>
+            <ul>
+               
+            </ul>
+        </div>
+
+       
+        <div class="col-4">
+            <ul>
+                <li class=""><a class="footer-a nav-elements btn" href="{{ route('became.revisor') }}"></a></li>
+            </ul>
+        </div>
      </div>
-     <div class="contain">
-         <div class="col">
-             <h1>Company</h1>
-             <ul>
-                 <li>About</li>
-                 <li>Mission</li>
-                 <li>Services</li>
-                 <li>Social</li>
-                 <li>Get in touch</li>
-             </ul>
-         </div>
-         <div class="col">
-             <h1>Products</h1>
-             <ul>
-                 <li>About</li>
-                 <li>Mission</li>
-                 <li>Services</li>
-                 <li>Social</li>
-                 <li>Get in touch</li>
-             </ul>
-         </div>
-         <div class="col">
-             <h1>Accounts</h1>
-             <ul>
-                 <li>About</li>
-                 <li>Mission</li>
-                 <li>Services</li>
-                 <li>Social</li>
-                 <li>Get in touch</li>
-             </ul>
-         </div>
-         <div class="col">
-             <h1>Resources</h1>
-             <ul>
-                 <li>Webmail</li>
-                 <li>Redeem code</li>
-                 <li>WHOIS lookup</li>
-                 <li>Site map</li>
-                 <li>Web templates</li>
-                 <li>Email templates</li>
-             </ul>
-         </div>
-         <div class="col">
-             <h1>Support</h1>
-             <ul>
-                 <li>Contact us</li>
-                 <li>Web chat</li>
-                 <li><a class="footer-a" href="{{ route('became.revisor') }}">Lavora con noi</a>
-         </div>
-         </li>
-         </ul>
-     </div>
-     <div class="col social">
-         <h1>Social</h1>
-         <ul>
-             <li><img src="https://svgshare.com/i/5fq.svg" width="32" style="width: 32px;"></li>
-             <li><img src="https://svgshare.com/i/5eA.svg" width="32" style="width: 32px;"></li>
-             <li><img src="https://svgshare.com/i/5f_.svg" width="32" style="width: 32px;"></li>
-         </ul>
-     </div>
-     <div class="clearfix"></div>
  </div>
- </div>
+
  <!-- END OF FOOTER -->
