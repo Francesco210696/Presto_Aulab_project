@@ -35,7 +35,8 @@ class CopyrightImage implements ShouldQueue
         }
         $srcPath = storage_path('app/public/' . $i->path);
 
-        $image = SpatieImage::load($srcPath);
+
+         $image = SpatieImage::load($srcPath);
 
 
         $image->watermark(base_path('resources\img\watermark.png'))
