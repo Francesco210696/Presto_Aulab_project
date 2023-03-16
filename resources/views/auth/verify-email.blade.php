@@ -1,55 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    @vite(['resources\css\app.css','resources\js\app.js'])
-    <title>Verifica Email</title>
-</head>
-
-<body>
-    <header>
-    </header>
-
+<x-main>
+    <x-slot name="title">Soon|Verifica Account</x-slot>
     <div class="container mt-5">
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card">
-                    <div class="card-header">{{ __('Verify Your Email Address') }}</div>
+                    <div class="card-header fw-bold text-center">!!VERIFICA IL TUO ACCOUNT!!</div>
 
                     <div class="card-body">
-                        @if (session('resent'))
-                            <div class="alert alert-success" role="alert">
-                                {{ __('A fresh verification link has been sent to your email address.') }}
-                            </div>
-                        @endif
+                        
 
-                        {{ __('Before proceeding, please check your email for a verification link.') }}
-                        {{ __('If you did not receive the email') }},
+                        prima di procedere Verifica il tuo Account dalla mail che hai ricevuto
+                        <br>
+                        non hai ricevuto la mail?
                         <form class="d-inline" method="POST" action="{{ route('verification.send') }}">
                             @csrf
-                            <button type="submit"
-                                class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                            <button type="submit" class="btn  p-2 m-2">clicca qui per riceverne
+                                un altra subito!!!</button>
                         </form>
+                        @if (session('status'))
+                            <div class="alert alert-success mt-3 mb-0" role="alert">
+                                una nuova mail di notifica è stata inviata al tuo indirizzo
+                            </div>
+                        @endif
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
-
-    <x-footer/>
-
-
-
-</body>
-
-</html>
-
-
-    
-
-
+</x-main>

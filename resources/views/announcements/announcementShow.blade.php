@@ -12,7 +12,7 @@
                     <h5 class="card-title  ">{{ $announcement->title }}</h5>
 
                     <p class="card-footer">Pubblicato il: {{ $announcement->created_at->format('d/m/Y') }}</p>
-                    <p class="btn mt-3">{{ $announcement->price }}€</p>
+                    <p class="btn mt-3 ">{{ $announcement->price }}€</p>
                     <a href="{{ route('category.show', ['category' => $announcement->category]) }}"
                         class="ms-3 btn">{{ $announcement->category->name }}</a>
                     <p>{{ $announcement->description }}</p>

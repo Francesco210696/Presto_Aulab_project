@@ -37,7 +37,7 @@
                     <div class="card card-theme">
                         <div class="">
                             <img src="{{ $announcement->images()->get()->isEmpty()? '\img\Soon_solo_logo.png': $announcement->images()->first()->getUrl(300, 300) }}"
-                                class="rounded me-5 w-100 img-fluid">
+                                class="rounded  w-100 img-fluid">
                         </div>
                         <div class="card-body ">
                             <h5 class="card-title">{{ $announcement->title }}</h5>

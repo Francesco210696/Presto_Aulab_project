@@ -87,7 +87,7 @@ a{
 
 
 nav{
-  background-color: var(--blue);
+  background-color: var(--grey);
 
 }
 .nav-search{
@@ -106,8 +106,7 @@ a.nav-elements{
   color: var(--gold);
 }
 
-.primary-logo {
-  box-shadow: 4px 4px 13px 0 rgba(0, 0, 0, 0.11);
+.primary-logo { 
 width: 115px;
 }
 
@@ -121,7 +120,7 @@ width: 115px;
 /* cards */
 
 .card-width{
-  width: 200px;
+  width: 400px;
 }
 
 
@@ -163,11 +162,14 @@ box-shadow: 6px 3px 10px 3px #45464a !important;
 }
 
 /* FOOTER  */
+.f-title{
+  color: var(--blue);
+}
 .footer{
 
   margin-top: 50px;
   width: 100%;
-  background-color: var(--blue);
+  background-color: var(--grey);
 }
 
 .li-foot{

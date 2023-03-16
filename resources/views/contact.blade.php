@@ -39,7 +39,7 @@
             <textarea name="message"  cols="30" rows="10" class="form-control"
                 @error('message') is-invalid @enderror placeholder="Scrivi il tuo messaggio">{{ old('message') }}</textarea>
         </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
+        <button type="submit" class="btn">Submit</button>
     </form>
 
    

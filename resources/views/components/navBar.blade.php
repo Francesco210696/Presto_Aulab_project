@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-xl bg-body-tertiary shadow">
     <div class="container-fluid">
         {{-- test logo --}}
-        <div class="primary-logo">
+        <div class="primary-logo me-2">
             <a href="{{ route('welcome') }}">
                 <img src="\img\Soon_solo_logo.png" alt="Soon.it">
             </a>
@@ -60,8 +60,8 @@
             @else
                 <ul class="navbar-nav d-flex me-5">
 
-                    <li class="nav-item dropdown">
-                        <a class="nav-elements dropdown-toggle  me-5" href="#" role="button"
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-elements dropdown-toggle  " href="#" role="button"
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
@@ -70,7 +70,7 @@
                                     AGGIUNGI ANNUNCIO</a>
                             </li>
                             <li>
-                                <a class="dropdown-item nav-elements" href="#">Profilo</a>
+                                <a class=" dropdown-item nav-elements" href="#">Profilo</a>
                             </li>
                             @if (Auth::user()->is_revisor)
                                 <li>

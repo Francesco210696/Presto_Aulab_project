@@ -40,11 +40,11 @@ class CopyrightImage implements ShouldQueue
 
 
         $image->watermark(base_path('resources\img\watermark.png'))
-            ->watermarkOpacity(40)
-            ->watermarkPosition(Manipulations::POSITION_TOP_LEFT)
+            ->watermarkOpacity(25)
+            ->watermarkPosition(Manipulations::POSITION_CENTER)
             ->watermarkHeight(100, Manipulations::UNIT_PERCENT)
             ->watermarkWidth(100, Manipulations::UNIT_PERCENT)
-            ->watermarkFit(Manipulations::FIT_STRETCH);
+            ->watermarkFit(Manipulations::FIT_CONTAIN);
 
         $image->save($srcPath);
     }
