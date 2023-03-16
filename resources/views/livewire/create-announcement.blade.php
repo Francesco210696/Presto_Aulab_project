@@ -75,8 +75,11 @@
             <div class="col-12">
                 <div class="row">
                     <div class="col-6">
-                        <button type="submit" class="btn btn-info shadow"> Salva </button>
+                        <button type="submit" class="btn btn-info shadow" wire:loading.attr="disabled"> Salva </button>
+
                     </div>
+
+                    {{-- session success --}}
                     <div class="col-6">
                         @if (session()->has('success'))
                             <span class="text-success">{{ session('success') }}</span>

@@ -36,11 +36,11 @@ class CopyrightImage implements ShouldQueue
         $srcPath = storage_path('app/public/' . $i->path);
 
 
-         $image = SpatieImage::load($srcPath);
+        $image = SpatieImage::load($srcPath);
 
 
         $image->watermark(base_path('resources\img\watermark.png'))
-            ->watermarkOpacity(100)
+            ->watermarkOpacity(40)
             ->watermarkPosition(Manipulations::POSITION_TOP_LEFT)
             ->watermarkHeight(100, Manipulations::UNIT_PERCENT)
             ->watermarkWidth(100, Manipulations::UNIT_PERCENT)

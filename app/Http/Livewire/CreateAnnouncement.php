@@ -25,8 +25,8 @@ class CreateAnnouncement extends Component
     public $images = [];
     public $temporary_images;
     public $announcement;
-
-
+    
+    
     protected $rules = [
         'title' => 'required|min:4',
         'description' => 'required|min:8',

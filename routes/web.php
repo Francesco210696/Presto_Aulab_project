@@ -6,6 +6,7 @@ use App\Http\Controllers\RevisorController;
 use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
+use Illuminate\Foundation\Auth\EmailVerificationRequest;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,8 +34,7 @@ Route::get('/dettaglio/annuncio/{announcement}', [AnnouncementController::class,
 Route::get('/annunci', [AnnouncementController::class, 'indexAnnouncement'])->name('announcements.index');
 
 //LIVEWIRE
-Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth')->name('announcements.create');
-
+Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncement'])->middleware('auth', 'verified')->name('announcements.create');
 
 //MAIL
 Route::get('/contattaci', [FrontController::class, 'contactUs'])->name('contactUs');
@@ -53,7 +53,7 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 
 //Richiedi di diventare revisore
 
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth')->name('became.revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth','verified')->name('became.revisor');
 
 //Rendi utente revisore
 
@@ -66,5 +66,3 @@ Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])
 
 Route::post('/lingua/{lang}', [FrontController::class, 'setLenguage'])->name('set_lenguage_locale');
 
-
-//LINGUA WEB DEFAULT 
