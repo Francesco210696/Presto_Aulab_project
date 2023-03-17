@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-xl bg-body-tertiary shadow">
     <div class="container-fluid">
-        {{-- test logo --}}
+        {{--  logo --}}
         <div class="primary-logo me-2">
             <a href="{{ route('welcome') }}">
                 <img src="\img\Soon_solo_logo.png" alt="Soon.it">
@@ -37,9 +37,9 @@
                         aria-expanded="false">
                         Categorie
                     </a>
-                    <ul class="dropdown-menu drop-category text-center">
+                    <ul class="dropdown-menu drop-category text-center drop-category-menu">
                         @foreach ($categories as $category)
-                            <li><a class=" nav-elements"
+                            <li class="overflow-hidden"><a class=" dropdown-item nav-elements "
                                     href="{{ route('category.show', $category) }}">{{ $category->name }}</a></li>
                         @endforeach
                     </ul>
@@ -65,20 +65,21 @@
                             data-bs-toggle="dropdown" aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
-                        <ul class="dropdown-menu drop-category text-center ">
+                        <ul class="dropdown-menu drop-category text-center overflow-semihidden">
                             <li class=" dropdown-item me-3"> <a class="btn me-2" href="{{ route('announcements.create') }}">
                                     AGGIUNGI ANNUNCIO</a>
                             </li>
-                            <li>
+                            {{-- <li class="overflow-hidden">
                                 <a class=" dropdown-item nav-elements" href="#">Profilo</a>
-                            </li>
+                            
+                            </li> --}}
                             @if (Auth::user()->is_revisor)
-                                <li>
+                                <li class="overflow-hidden">
                                     <a class="dropdown-item nav-elements" aria-current="page"
                                         href="{{ route('revisor.index') }}">
                                         Revisione
                                         <span
-                                            class="position-absolute  start-100 translate-middle badge rounded-pill bg-danger">
+                                            class="position-absolute start-100 translate-middle badge rounded-pill bg-danger">
                                             {{ App\Models\Announcement::toBeRevisionedCount() }}
                                             <span class="visually-hidden">
                                                 unread messages
@@ -89,14 +90,14 @@
                             @endif
 
 
-                            <li><a class="dropdown-item nav-elements" href="#">impostazioni</a></li>
+                            {{-- <li class="overflow-hidden"><a class="dropdown-item nav-elements" href="#">impostazioni</a></li> --}}
                             <li>
-                                <hr class="dropdown-divider nav-elements">
+                                <hr class="dropdown-divider ">
                             </li>
                             <li>
                                 <form action="/logout" method="POST">
                                     @csrf
-                                    <button type="submit" class="dropdown-item nav-elements">Logout</button>
+                                    <button type="submit" class="dropdown-item btn  ">Logout</button>
                                 </form>
                         </ul>
                     </li>

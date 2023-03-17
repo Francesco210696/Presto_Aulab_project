@@ -39,6 +39,7 @@ Route::get('/nuovo-annuncio', [AnnouncementController::class, 'createAnnouncemen
 //MAIL
 Route::get('/contattaci', [FrontController::class, 'contactUs'])->name('contactUs');
 Route::post('/salva/contatto', [FrontController::class, 'saveContact'])->name('saveContact');
+Route::post('/contatta/utente/{email}', [FrontController::class, 'emailforShop'])->name('contactUser');
 
 //Home Revisore
 Route::get('/revisor/home', [RevisorController::class, 'index'])->middleware('isRevisor')->name('revisor.index');
@@ -53,7 +54,7 @@ Route::patch('/rifiuta/annuncio/{announcement}', [RevisorController::class, 'rej
 
 //Richiedi di diventare revisore
 
-Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth','verified')->name('became.revisor');
+Route::get('/richiesta/revisore', [RevisorController::class, 'becomeRevisor'])->middleware('auth', 'verified')->name('became.revisor');
 
 //Rendi utente revisore
 
@@ -65,4 +66,3 @@ Route::get('/ricerca/annuncio', [FrontController::class, 'searchAnnouncements'])
 //CAMBIO LINGUA
 
 Route::post('/lingua/{lang}', [FrontController::class, 'setLenguage'])->name('set_lenguage_locale');
-

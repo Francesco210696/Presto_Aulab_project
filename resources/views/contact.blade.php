@@ -9,6 +9,7 @@
             <p>{{session('success')}}</p>
         </div>
         @endif
+        <h2>Contattaci</h2>
         <form action="{{ route('saveContact') }}" method="POST">
             @csrf
             <div class="col-12 mb-3">

@@ -2,6 +2,7 @@
 @import 'bootstrap';
 @import 'bootstrap-icons';
 @import './loginRegister.css';
+@import './carousel.css';
 @import 'flag-icon-css/css/flag-icons';
 @import 'font-awesome/css/font-awesome';
 
@@ -93,6 +94,21 @@ nav{
 .nav-search{
   width: 800px;
 }
+
+@media screen and (min-width:401px) {
+  .nav-search {
+    width: 200px; 
+  }
+}
+
+@media screen and (min-width:800px) {
+  .nav-search {
+    width: 400px; 
+  }
+}
+
+
+
 .hamburger{
 background-color: var(--gold);
 }
@@ -112,8 +128,6 @@ width: 115px;
 
 .primary-logo a img {
   display: block;
-  max-width: 100%;
-  height: auto;
   width: 100%;
 }
 
@@ -127,6 +141,9 @@ width: 115px;
 /* category */
 .drop-category{
   background-color: var(--grey);
+}
+.drop-category-menu{
+  width:250px;
 }
 
 .category-home-buttons{
