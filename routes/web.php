@@ -23,6 +23,7 @@ use Illuminate\Foundation\Auth\EmailVerificationRequest;
 //FRONTCONTROLLER
 Route::get('/', [FrontController::class, 'welcome'])->name('welcome');
 Route::get('/categoria/{category}', [FrontController::class, 'categoryShow'])->name('category.show');
+Route::get('/profilo/{user}', [FrontController::class, 'profile'])->middleware('auth')->name('profile');
 
 
 

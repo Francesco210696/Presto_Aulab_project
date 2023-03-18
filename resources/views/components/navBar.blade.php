@@ -61,18 +61,18 @@
                 <ul class="navbar-nav d-flex me-5">
 
                     <li class="nav-item dropdown me-5">
-                        <a class="nav-elements dropdown-toggle  " href="#" role="button"
-                            data-bs-toggle="dropdown" aria-expanded="false">
+                        <a class="nav-elements dropdown-toggle  " href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
                             {{ Auth::user()->name }}
                         </a>
                         <ul class="dropdown-menu drop-category text-center overflow-semihidden">
                             <li class=" dropdown-item me-3"> <a class="btn me-2" href="{{ route('announcements.create') }}">
                                     AGGIUNGI ANNUNCIO</a>
                             </li>
-                            {{-- <li class="overflow-hidden">
-                                <a class=" dropdown-item nav-elements" href="#">Profilo</a>
-                            
-                            </li> --}}
+                            <li class="overflow-hidden">
+                                <a class=" dropdown-item nav-elements" href="{{ route('profile',Auth::user()) }}">Profilo</a>
+
+                            </li>
                             @if (Auth::user()->is_revisor)
                                 <li class="overflow-hidden">
                                     <a class="dropdown-item nav-elements" aria-current="page"
